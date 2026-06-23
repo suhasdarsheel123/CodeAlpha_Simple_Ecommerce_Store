@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <h1><a href="index.html">Blue Store</a></h1>
+        <div class="nav-links">
+            <a href="#" onclick="openCheckout()">Checkout</a>
+            <a href="#" id="cart-link">Cart (<span id="cart-count">0</span>)</a>
+            <a href="login.html">Login</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h2>Premium Tech Gear</h2>
+        <p>Upgrade your setup with our top-tier developer equipment.</p>
+    </header>
+
+    <main>
+        <h2 style="font-size: 2rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem;">Featured Products</h2>
+        
+        <div id="product-grid" class="product-grid">
+            </div> 
+    </main>
+    <!-- CHECKOUT MODAL SECTION -->
+    <div id="checkout-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Your Cart Summary</h2>
+                <button onclick="closeCheckout()" class="close-btn">&times;</button>
+            </div>
+            
+            <!-- JavaScript will inject the cart list here -->
+            <div id="cart-items-list" class="cart-items"></div>
+            
+            <div class="modal-footer">
+                <h3>Total: $<span id="checkout-total">0.00</span></h3>
+                <button onclick="processOrder()" class="checkout-btn">Confirm & Pay</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast-container"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - CodeAlpha Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1><a href="index.html" style="color: white; text-decoration: none;">CodeAlpha Store</a></h1>
+    </nav>
+
+    <main style="max-width: 400px; margin: 2rem auto; text-align: center;">
+        <h2>Create an Account</h2>
+        <form id="register-form" style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+            <input type="text" id="reg-username" placeholder="Username" required style="padding: 10px;">
+            <input type="email" id="reg-email" placeholder="Email" required style="padding: 10px;">
+            <input type="password" id="reg-password" placeholder="Password" required style="padding: 10px;">
+            <button type="submit" style="padding: 10px; background-color: #333; color: white; border: none; cursor: pointer;">Register</button>
+        </form>
+        <p style="margin-top: 15px;">Already have an account? <a href="login.html">Login here</a></p>
+    </main>
+
+    <script src="auth.js"></script>
+</body>
+</html>
